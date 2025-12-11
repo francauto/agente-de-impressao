@@ -3,7 +3,7 @@ version: '3.8'
 services:
   agente-impressao:
     build:
-      context: .
+      context: https://github.com/francauto/agente-de-impressao.git
       dockerfile: Dockerfile
     container_name: agente-impressao
     network_mode: host
