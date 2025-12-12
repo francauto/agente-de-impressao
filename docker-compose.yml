@@ -6,7 +6,8 @@ services:
       context: https://github.com/francauto/agente-de-impressao.git
       dockerfile: Dockerfile
     container_name: agente-impressao
-    network_mode: host
+    ports:
+      - "${PORT:-4005}:${PORT:-4005}"
     restart: unless-stopped
     environment:
       - NODE_ENV=${NODE_ENV:-production}
